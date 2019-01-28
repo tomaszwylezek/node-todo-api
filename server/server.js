@@ -18,6 +18,8 @@ app.use(bodyParser.json());
 app.use('/todos', todosRouter);
 app.use('/users', usersRouter);
 
+// TODO move handling router to controllers
+
 app.listen(port, () => {
   console.log(`Started on port ${port}`);
 });

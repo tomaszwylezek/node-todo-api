@@ -1,12 +1,10 @@
 const express = require("express");
-const { ObjectID } = require("mongodb");
 const _ = require("lodash");
-
 
 const { User } = require("../models/user");
 const { authenticate } = require("../middleware/authenticate");
-const usersRouter = express.Router();
 
+const usersRouter = express.Router();
 
 usersRouter.post("/", async (req, res) => {
   try {
@@ -43,7 +41,6 @@ usersRouter.delete("/me/token", authenticate, async (req, res) => {
     res.status(400).send();
   }
 });
-
 
 module.exports = {
   usersRouter

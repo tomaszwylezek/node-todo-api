@@ -2,9 +2,9 @@ const express = require("express");
 const { ObjectID } = require("mongodb");
 const _ = require("lodash");
 
-
 const { Todo } = require("../models/todo");
 const { authenticate } = require("../middleware/authenticate");
+
 const todosRouter = express.Router();
 
 todosRouter.get("/", authenticate, async (req, res) => {
